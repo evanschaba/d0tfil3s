@@ -95,7 +95,7 @@ zinit snippet OMZP::command-not-found
 alias ls='ls --color'
 zstyle ':completion:*'  matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-#zstyle ':completion:*' menu no
+zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:cokmplete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
@@ -126,15 +126,15 @@ if type brew &>/dev/null; then
 fi
 
 # set up fzf
-zinit light Aloxaf/fzf-tab
+#zinit light Aloxaf/fzf-tab
 
 # fzf fuzzy file finding
 eval "$(fzf --zsh)"
 
 
 # set up completions
-zinit light zsh-users/zsh-completions
-zinit light zsh-users/zsh-autosuggestions
+#zinit light zsh-users/zsh-completions
+#zinit light zsh-users/zsh-autosuggestions
 
 # load up completions
 autoload -U compinit && compinit
@@ -148,4 +148,3 @@ zinit cdreplay -q
 # brew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-#### hello world !! This is my new means of managing my dotfiles
