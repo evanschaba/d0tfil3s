@@ -31,3 +31,9 @@ bindings = [
 ]
 #for video
 # size = 35.0
+
+# clear screen with ctrl+L
+#[[key_bindings]]
+#key = "L"
+#mods = "Control"
+#action = "ClearHistory"
